@@ -1,0 +1,40 @@
+.item-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33.333% - 2rem);
+    margin-bottom: 2rem;
+  }
+  
+  .item-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .item-card h2 {
+    background-color: #ff69b4;
+    color: #fff;
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  .item-card p {
+    margin: 1rem;
+  }
+  
+  .item-card a {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #8a2be2;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .item-card a:hover {
+    background-color: #333;
+  }
+  

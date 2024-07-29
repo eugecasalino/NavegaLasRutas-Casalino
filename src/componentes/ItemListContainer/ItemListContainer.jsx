@@ -1,7 +1,42 @@
-import React from 'react'
-const ItemListContainer = ({greeting}) => {
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import './ILC.css'
+import { getProducts } from '../../asyncMock'
+import ItemList from '../ItemList/ItemList'
+
+const ItemListContainer = ({ greeting }) => {
+  const [productos, setProductos] = useState([])
+  const [loading, setLoading] = useState(true)
+  const { categoriaId } = useParams()
+
+  useEffect(() => {
+    getProducts()
+      .then((data) => {
+        if (categoriaId) {
+          setProductos(data.filter(item => item.categoria === categoriaId));
+        } else {
+          setProductos(data);
+        }
+      })
+      .finally(() => setLoading(false))
+  }, [categoriaId]);
+
+  if (loading) {
+    return <div>Cargando...</div>
+  }
+
   return (
-    <div>{greeting}</div>
+    <div className="product-list">
+      {productos.map(item => (
+        <div key={item.id} className="product-card">
+          <img src={item.image} alt={item.nombre} />
+          <h3>{item.nombre}</h3>
+          <p>{item.precio}</p>
+          <a href="#">Ver detalles</a>
+        </div>
+      ))}
+      <h2>{greeting}</h2>
+    </div>
   )
 }
 
