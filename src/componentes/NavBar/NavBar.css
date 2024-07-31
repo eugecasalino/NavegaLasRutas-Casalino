@@ -2,13 +2,10 @@
   background-color: #8a2be2;
   color: #fff;
   padding: 1rem;
+  padding-left: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.navbar h1 {
-  margin: 0;
 }
 
 .nav-links ul {
@@ -16,6 +13,8 @@
   padding: 0;
   display: flex;
   gap: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links a {
@@ -26,4 +25,18 @@
 
 .nav-links a:hover {
   background-color: #ff69b4;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links .btn {
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.nav-links .btn:hover {
+  background-color: #f50057;
 }

@@ -4,6 +4,7 @@ import './ILC.css'
 import { getProducts } from '../../asyncMock'
 import ItemList from '../ItemList/ItemList'
 
+
 const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([])
   const [loading, setLoading] = useState(true)
@@ -27,14 +28,7 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <div className="product-list">
-      {productos.map(item => (
-        <div key={item.id} className="product-card">
-          <img src={item.image} alt={item.nombre} />
-          <h3>{item.nombre}</h3>
-          <p>{item.precio}</p>
-          <a href="#">Ver detalles</a>
-        </div>
-      ))}
+      <ItemList productos={productos} />
       <h2>{greeting}</h2>
     </div>
   )
