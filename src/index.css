@@ -15,11 +15,15 @@ body {
   padding: 0;
 }
 
+<<<<<<< HEAD
 h2,
 h3,
 h4,
 h5,
 h6 {
+=======
+h2, h3, h4, h5, h6 {
+>>>>>>> db6bfc4ebc54c904660f09a9150a34df8ec90a05
   color: #daa0e1;
   margin: 0;
   padding: 0.1em 0;
@@ -44,7 +48,11 @@ h1 {
   margin: 0;
 }
 
+<<<<<<< HEAD
 h1:hover {
+=======
+h1:hover{
+>>>>>>> db6bfc4ebc54c904660f09a9150a34df8ec90a05
   color: rgb(229, 210, 210);
 }
 
