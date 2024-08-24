@@ -70,8 +70,4 @@ export const getOneProduct = (id) => {
             resolve(items.find(e => e.id.toString() === id));
         }, 1000);
     });
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> db6bfc4ebc54c904660f09a9150a34df8ec90a05
